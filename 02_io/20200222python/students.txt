@@ -1,0 +1,5 @@
+name    math    chinese   english   biology
+Joshua  94      67        97        100
+Gordan  77      89        88        94
+Josh    88      96        90        98
+Ivor    99      89        94        100
