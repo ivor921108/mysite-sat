@@ -3,7 +3,7 @@ class Student:
     name = 'unknown'
     height =0
     weight =0
-    def  __init__(self, sid, name, gender):
+    def  __init__(self, sid, name, gender):  #__init__ 為建構式(contration)
         self.sid = sid
         self.name = name
         self.gender = gender
@@ -35,7 +35,15 @@ class BmiReport:
             self.sts.remove(st)
     def update(self, sid, opts={}):
         st = self.find(sid)
-        if #
+        if st:
+            if opts.get('name'):  #dictionary
+                st.name = opts.get('name')
+            if opts.get('gender'):
+                st.gender = opts.get('gender')
+            if opts.get('height'):
+                st.height = opts.get('height')
+            if opts.get('weight'):
+                st.weight = opts.get('weight')            
 
     def pr_report(self): 
         for st in self.sts:
@@ -62,7 +70,7 @@ def  test():
     report =BmiReport('Dummy')
     report.read_file('students.txt')
     report.remove('A03')
-    report.uptate('A02', {'height' : 172, 'weight':50})
+    report.update('A02', {'height' : 172, 'weight':50})
     report.pr_report()
     #report.pr_report()  
     #report.save_file('test.txt')  
